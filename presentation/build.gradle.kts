@@ -4,6 +4,7 @@ plugins {
 //    id("com.github.dcendents.android-maven")
     id ("maven-publish")
     id("org.jetbrains.dokka")
+    id("kotlin-android")
 }
 
 android {
@@ -31,10 +32,12 @@ android {
 
     kotlinOptions {
         jvmTarget = "1.8"
+        useIR = true
     }
 
     composeOptions {
         kotlinCompilerExtensionVersion = Libs.Jetpack.compose
+        kotlinCompilerVersion = "1.4.30"
     }
 
     buildTypes {
@@ -58,6 +61,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
     implementation("androidx.core:core-ktx:1.2.0")
     implementation("org.koin:koin-android:2.2.2")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.0")
     testImplementation("junit:junit:4.12")
     androidTestImplementation("androidx.test.ext:junit:1.1.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.2.0")

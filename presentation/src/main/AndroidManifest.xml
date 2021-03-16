@@ -1,11 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.sagebionetworks.assessmentmodel.presentation" >
+    package="org.sagebionetworks.assessmentmodel.presentation">
+
     <application>
-
         <activity
-            android:name=".AssessmentActivity">
-        </activity>
-
+            android:name=".inputs.ComposeTextInputView"
+            android:exported="true"
+            android:label="@string/title_activity_compose_text_input_view"
+            android:theme="@style/Theme.AssessmentModelKotlinNative.NoActionBar"></activity>
+        <activity android:name=".AssessmentActivity"></activity>
     </application>
 
 </manifest>

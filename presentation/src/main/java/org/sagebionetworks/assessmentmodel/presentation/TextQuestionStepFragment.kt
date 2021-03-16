@@ -4,6 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
+import androidx.compose.ui.platform.ComposeView
 import org.sagebionetworks.assessmentmodel.Step
 import org.sagebionetworks.assessmentmodel.presentation.databinding.TextQuestionStepFragmentBinding
 import org.sagebionetworks.assessmentmodel.survey.*
@@ -26,9 +29,18 @@ class TextQuestionStepFragment: StepFragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        _binding = TextQuestionStepFragmentBinding.inflate(layoutInflater, container, false)
-        return binding.root
+                              savedInstanceState: Bundle?
+    ): View? {
+        return ComposeView(requireContext()).apply {
+            setContent {
+                MaterialTheme {
+                    // In Compose world
+                    Text("Hello Compose!")
+                }
+            }
+            _binding = TextQuestionStepFragmentBinding.inflate(layoutInflater, container, false)
+            binding.root
+        }
     }
 
     override fun onDestroyView() {

@@ -1,4 +1,5 @@
 buildscript {
+    val compose_version by extra("1.0.0-beta01")
     repositories {
         google()
         mavenCentral()
@@ -9,6 +10,7 @@ buildscript {
         classpath(Libs.Kotlin.gradlePlugin)
         classpath(Libs.Kotlin.serialization)
         classpath(Libs.androidMavenGradlePlugin)
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.30")
     }
 }
 

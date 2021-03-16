@@ -18,6 +18,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/question_header"/>
 
+    <androidx.compose.ui.platform.ComposeView
+        android:id="@+id/compose_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <org.sagebionetworks.assessmentmodel.presentation.views.StepNavigationBar
         android:id="@+id/nav_bar"
         android:layout_width="match_parent"
